@@ -26,7 +26,7 @@ const itinerary = [
       { time:'21:00', place:'제주공항', title:'도착 · 렌터카 수령',
         transit:'함덕 숙소까지 약 40분 이동', point:'도착 직후 렌터카 서류·보험 꼼꼼히 확인하기',
         tip:'공항이 붐빌 수 있으니 렌터카 셔틀 위치를 미리 확인해두세요.' },
-      { time:'22:00', place:'함덕', title:'체크인 및 휴식',
+      { time:'22:00', place:'함덕 · 뭉클 펜션', title:'체크인 및 휴식',
         transit:'숙소 도착 후 도보 이동 없음', point:'다음날 새벽 한라산 등반 대비 일찍 취침',
         tip:'등산복·등산화·간식을 미리 배낭에 챙겨두면 새벽에 여유로워요.' },
     ]
@@ -35,7 +35,7 @@ const itinerary = [
     date:'7/18', label:'DAY 2', full:'7월 18일 (토) · 한라산', anchor:'d2',
     items:[
       { time:'06:00', place:'한라산', title:'관음사 원점회귀 출발',
-        transit:'함덕 숙소에서 관음사 탐방로 입구까지 차량 약 40분', point:'간식과 물 최소 1.5L 이상 준비',
+        transit:'뭉클 펜션(함덕)에서 관음사 탐방로 입구까지 차량 약 40분', point:'간식과 물 최소 1.5L 이상 준비',
         tip:'주차장이 아침 일찍 만차가 되니 05:30 이전 도착을 추천해요.' },
       { time:'07:00–13:00', place:'한라산', title:'관음사 코스 등반',
         transit:'편도 약 8.7km, 왕복 약 5~6시간 소요', point:'삼각봉 대피소에서 정상 조망 감상',
@@ -43,7 +43,7 @@ const itinerary = [
       { time:'13:30', place:'함덕', title:'점심 (흑본오겹 / 함덕고갈치 / 고집돌우럭)',
         transit:'하산 후 차량으로 함덕까지 약 40분', point:'등반 후 체력 보충용 든든한 한 끼',
         tip:'주말 점심시간은 대기가 있을 수 있어 미리 전화 문의를 추천해요.' },
-      { time:'15:00', place:'함덕', title:'숙소 휴식',
+      { time:'15:00', place:'함덕 · 뭉클 펜션', title:'숙소 휴식',
         transit:'-', point:'등반 피로 회복, 샤워 및 낮잠',
         tip:'다리 근육 이완을 위해 스트레칭을 해두면 다음날이 편해요.' },
       { time:'18:30', place:'함덕', title:'저녁 · 해변 산책',
@@ -55,12 +55,12 @@ const itinerary = [
     date:'7/19', label:'DAY 3', full:'7월 19일 (일) · 동부 스쿠터', anchor:'d3',
     items:[
       { time:'09:00', place:'함덕', title:'스쿠터 대여',
-        transit:'숙소 인근 대여점', point:'125cc 이상 스쿠터 추천 (해안도로 안정감)',
+        transit:'뭉클 펜션 인근 대여점', point:'125cc 이상 스쿠터 추천 (해안도로 안정감)',
         tip:'운전면허증과 국제면허증(필요 시) 반드시 지참하세요.' },
       { time:'09:30–15:30', place:'동부', title:'함덕 → 김녕 → 월정리 → 세화 → 비자림',
         transit:'전체 약 45km, 카페 방문 포함 약 6시간', point:'해안도로 드라이브와 카페 투어를 함께',
         tip:'한여름 자외선이 강하니 자외선 차단 아이템을 꼭 챙기세요.' },
-      { time:'16:00', place:'함덕', title:'숙소 휴식',
+      { time:'16:00', place:'함덕 · 뭉클 펜션', title:'숙소 휴식',
         transit:'-', point:'저녁 일정 전 재정비',
         tip:'스쿠터 반납 시간을 미리 확인해두세요.' },
       { time:'18:30', place:'서우봉', title:'일몰 감상',
@@ -75,7 +75,7 @@ const itinerary = [
     date:'7/20', label:'DAY 4', full:'7월 20일 (월) · 남원·제주시', anchor:'d4',
     items:[
       { time:'08:30', place:'남원', title:'태웃개 · 제주올레 5코스',
-        transit:'함덕 숙소 체크아웃 후 차량 약 1시간', point:'해안 절경 산책로, 여유로운 아침 산책',
+        transit:'뭉클 펜션(함덕) 체크아웃 후 차량 약 1시간', point:'해안 절경 산책로, 여유로운 아침 산책',
         tip:'짐을 미리 트렁크에 정리해두면 이동이 편해요.' },
       { time:'11:30', place:'남원', title:'공천포식당 점심 (한치·전복물회)',
         transit:'태웃개에서 차량 10분', point:'브레이크타임 전 방문 추천',
@@ -98,6 +98,9 @@ const itinerary = [
     ]
   },
 ];
+
+// ---- 숙소 ----
+const accommodation = { name:'뭉클 펜션', lat:33.5440, lng:126.6705, desc:'함덕 숙소 (3박)' };
 
 // ---- 관광지 12곳 ----
 const spots = [
@@ -219,7 +222,7 @@ const marketItems = [
 
 // ---- 예산 ----
 const budgetItems = [
-  { icon:'fa-bed', label:'숙소', sub:'3박, 함덕 기준', amount:'약 45만원' },
+  { icon:'fa-bed', label:'숙소', sub:'뭉클 펜션(함덕) · 3박', amount:'약 45만원' },
   { icon:'fa-car', label:'렌터카', sub:'4일, 보험 포함', amount:'약 25만원' },
   { icon:'fa-motorcycle', label:'스쿠터 대여', sub:'1일', amount:'약 6만원' },
   { icon:'fa-utensils', label:'식비', sub:'2인, 8끼 기준', amount:'약 40만원' },
@@ -544,9 +547,19 @@ function initMap(){
 
 function drawMapMarkers(dayIdx){
   markerLayer.clearLayers();
+
+  // 숙소는 필터와 무관하게 항상 표시
+  const homeMarker = L.marker([accommodation.lat, accommodation.lng], {
+    icon: L.divIcon({
+      className:'', html:'<div style="background:#FF7A47;width:26px;height:26px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.3);"><i class="fa-solid fa-house" style="transform:rotate(45deg);color:#fff;font-size:11px;"></i></div>',
+      iconSize:[26,26], iconAnchor:[13,26]
+    })
+  }).addTo(markerLayer);
+  homeMarker.bindPopup(`<div class="map-popup-title">${accommodation.name}</div><div class="map-popup-row"><i class="fa-solid fa-house"></i> ${accommodation.desc}</div>`);
+
   const ids = dayIdx===-1 ? spots.map(s=>s.id) : dayToSpots[dayIdx];
   const filtered = spots.filter(s=>ids.includes(s.id));
-  const latlngs = [];
+  const latlngs = [[accommodation.lat, accommodation.lng]];
   filtered.forEach(s=>{
     const marker = L.circleMarker([s.lat,s.lng], {
       radius:9, color:'#0B6E58', weight:2, fillColor:'#149C82', fillOpacity:0.85
